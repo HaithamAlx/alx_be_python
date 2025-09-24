@@ -1,4 +1,4 @@
-x = int(input("Enter the size of the pattern "))
+x = int(input("Enter the size of the pattern:"))
 y = x
 rows = 0
 
