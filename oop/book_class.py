@@ -1,20 +1,20 @@
 class Book:
-    def __init__(self, Title,Author, Year: int):
-        self.Title = Title
-        self.Author = Author
-        self.year = Year
+    def __init__(self, title,author, year: int):
+        self.title = title
+        self.author = author
+        self.year = year
     
     def __str__(self):
 
-        return f"{self.Title} by {self.Author}, published in {self.year}"
+        return f"{self.title} by {self.author}, published in {self.year}"
 
     def __repr__(self):
 
-        return f"Book('{self.Title}', '{self.Author}', {self.year})"
+        return f"Book('{self.title}', '{self.author}', {self.year})"
     
     def __del__(self):
 
-        print (f"Deleting {self.Title}")
+        print (f"Deleting {self.title}")
 
     
   
