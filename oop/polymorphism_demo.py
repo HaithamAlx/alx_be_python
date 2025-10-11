@@ -21,7 +21,7 @@ class Circle(Shape):
         self.radius = radius 
 
     def area(self):
-        return f" {math.pi * self.radius ** 2}"
+        return f"{math.pi * self.radius ** 2}"
     
 def main():
     shapes = [
@@ -30,7 +30,7 @@ def main():
     ]
 
     for shape in shapes:
-        print(f"The area of the {shape.__class__.__name__} is:{shape.area()}")
+        print(f"The area of the {shape.__class__.__name__} is: {shape.area()}")
 
 if __name__ == "__main__":
     main()
