@@ -1,37 +1,28 @@
 class BankAccount:
-    def __init__ (self, account_balance = None):
-        if account_balance is not None:
-            if float(self.read_from_file()) == account_balance:    
-                self.account_balance = account_balance
-            else:
-                self.account_balance = float(self.read_from_file())
-        else:
-            pass
+    def __init__(self,account_balance = 0):
+        self.account_balance = account_balance
 
-    def add_to_file(self):
-        with open(r"C:\Users\einkw\Documents\Git\python\programming_paradigm_01\balance.txt",'w') as file:
-            file.write(str(self.account_balance))
+    def deposit (self,amount):
+       
+        self.account_balance += amount
+        return self.account_balance 
+    
 
-    def read_from_file(self):
-            with open(r"C:\Users\einkw\Documents\Git\python\programming_paradigm_01\balance.txt",'r') as file:
-                content = file.read()
-                if content:
-                    return content
-                else:
-                    pass
-        
-    def deposit(self, amount):
-        self.account_balance = (float(self.read_from_file()))+amount
-        self.add_to_file()
-
-    def withdraw(self, amount):
-        if amount <= self.account_balance:
-            self.account_balance = (float(self.read_from_file()))-amount
-            self.add_to_file()
+    def withdraw (self,amount): 
+        if self.account_balance >= amount :
+            self.account_balance -= amount 
             return True
         else:
             return False
-        
 
     def display_balance(self):
-        print(f'Current Balance: ${self.account_balance}')
+        print(f"Current Balance: ${self.account_balance}")
+
+    def __str__(self):
+        return f"The current balance is ${self.account_balance}"
+    
+# account=BankAccount(100)
+# account.deposit(50)
+# account.withdraw(30)
+# account.display_balance()
+# print(account)
