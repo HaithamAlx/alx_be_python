@@ -6,9 +6,6 @@ Interest = principal * Rate * time
 print ("The simple interest is:", Interest)
 
 
-# new file
-# new file
-# New file
-# New file
+
 
 
