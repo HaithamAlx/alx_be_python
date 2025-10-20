@@ -1,9 +1,9 @@
-Number1 = 10            #1st digit 
-Number2 = 5             #2nd digit
+number1 = 10            #1st digit 
+number2 = 5             #2nd digit
 
-addition = Number1 + Number2
-Substraction = Number1 - Number2
-Product = Number1 * Number2
+addition = number1 + number2
+Substraction = number1 - number2
+Product = number1 * number2
 
 print ("The Addition of 10 and 5 is",addition)
 
